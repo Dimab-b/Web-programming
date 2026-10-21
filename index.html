@@ -8,11 +8,24 @@
   <meta name="keywords" content=".NET, C#, ASP.NET Core, Backend Developer, Junior .NET, Trainee .NET">
   <title>Dmytro Batih — Junior / Trainee .NET Developer</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    ::selection {
+      color: #0f172a;
+      background-color: #bfdbfe;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Dmytro Batih</h1>
-    <p>Junior / Trainee .NET Developer</p>
+    <div class="brand">
+      <h1>Dmytro Batih</h1>
+      <p>Junior / Trainee .NET Developer</p>
+    </div>
     <address>
       <p>Lviv Region, Ukraine (open to remote and on-site work in Lviv)</p>
       <ul>
@@ -56,176 +69,202 @@
     <section id="skills">
       <h2>Technical Skills</h2>
 
-      <h3>Programming Language</h3>
-      <ul>
-        <li>C#</li>
-      </ul>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Programming Language</h3>
+          <ul>
+            <li>C#</li>
+          </ul>
+        </div>
 
-      <h3>Backend</h3>
-      <ul>
-        <li>ASP.NET Core Web API</li>
-        <li>ASP.NET Core MVC</li>
-        <li>REST API</li>
-      </ul>
+        <div class="skill-group">
+          <h3>Backend</h3>
+          <ul>
+            <li>ASP.NET Core Web API</li>
+            <li>ASP.NET Core MVC</li>
+            <li>REST API</li>
+          </ul>
+        </div>
 
-      <h3>Architecture &amp; Design</h3>
-      <ul>
-        <li>Clean Architecture</li>
-        <li>Onion Architecture</li>
-        <li>CQRS</li>
-        <li>MediatR</li>
-        <li>Domain-Driven Design</li>
-        <li>Repository Pattern</li>
-        <li>Unit of Work</li>
-        <li>Specification Pattern</li>
-        <li>Dependency Injection</li>
-        <li>MassTransit</li>
-      </ul>
+        <div class="skill-group">
+          <h3>Architecture &amp; Design</h3>
+          <ul>
+            <li>Clean Architecture</li>
+            <li>Onion Architecture</li>
+            <li>CQRS</li>
+            <li>MediatR</li>
+            <li>Domain-Driven Design</li>
+            <li>Repository Pattern</li>
+            <li>Unit of Work</li>
+            <li>Specification Pattern</li>
+            <li>Dependency Injection</li>
+            <li>MassTransit</li>
+          </ul>
+        </div>
 
-      <h3>Databases</h3>
-      <ul>
-        <li>PostgreSQL</li>
-        <li>MySQL</li>
-        <li>Entity Framework Core</li>
-        <li>Code First Migrations</li>
-        <li>Dapper</li>
-        <li>Explain Analyze &amp; Transactions</li>
-      </ul>
+        <div class="skill-group">
+          <h3>Databases</h3>
+          <ul>
+            <li>PostgreSQL</li>
+            <li>MySQL</li>
+            <li>Entity Framework Core</li>
+            <li>Code First Migrations</li>
+            <li>Dapper</li>
+            <li>Explain Analyze &amp; Transactions</li>
+          </ul>
+        </div>
 
-      <h3>Authentication &amp; Security</h3>
-      <ul>
-        <li>JWT Authentication</li>
-        <li>Refresh Tokens</li>
-        <li>ASP.NET Identity</li>
-        <li>Role-Based Authorization</li>
-        <li>HTTP-Only Cookies</li>
-        <li>Optimistic Concurrency (RowVersion)</li>
-      </ul>
+        <div class="skill-group">
+          <h3>Authentication &amp; Security</h3>
+          <ul>
+            <li>JWT Authentication</li>
+            <li>Refresh Tokens</li>
+            <li>ASP.NET Identity</li>
+            <li>Role-Based Authorization</li>
+            <li>HTTP-Only Cookies</li>
+            <li>Optimistic Concurrency (RowVersion)</li>
+          </ul>
+        </div>
 
-      <h3>Caching &amp; Background Processing</h3>
-      <ul>
-        <li>Redis</li>
-        <li>Hangfire</li>
-        <li>RabbitMQ</li>
-      </ul>
+        <div class="skill-group">
+          <h3>Caching &amp; Background Processing</h3>
+          <ul>
+            <li>Redis</li>
+            <li>Hangfire</li>
+            <li>RabbitMQ</li>
+          </ul>
+        </div>
 
-      <h3>Validation &amp; Logging</h3>
-      <ul>
-        <li>FluentValidation</li>
-        <li>Serilog</li>
-        <li>Global Exception Handling</li>
-      </ul>
+        <div class="skill-group">
+          <h3>Validation &amp; Logging</h3>
+          <ul>
+            <li>FluentValidation</li>
+            <li>Serilog</li>
+            <li>Global Exception Handling</li>
+          </ul>
+        </div>
 
-      <h3>Testing</h3>
-      <ul>
-        <li>xUnit</li>
-        <li>Moq</li>
-        <li>FluentAssertions</li>
-        <li>Unit Testing</li>
-        <li>Integration Testing</li>
-      </ul>
+        <div class="skill-group">
+          <h3>Testing</h3>
+          <ul>
+            <li>xUnit</li>
+            <li>Moq</li>
+            <li>FluentAssertions</li>
+            <li>Unit Testing</li>
+            <li>Integration Testing</li>
+          </ul>
+        </div>
 
-      <h3>AI &amp; Productivity</h3>
-      <ul>
-        <li>AI Coding Agents (Claude, DeepSeek, Cursor)</li>
-        <li>AI-Assisted Development, Prompt Engineering for Code &amp; Unit Test Generation</li>
-        <li>AI Refactoring &amp; Debugging</li>
-      </ul>
+        <div class="skill-group">
+          <h3>AI &amp; Productivity</h3>
+          <ul>
+            <li>AI Coding Agents (Claude, DeepSeek, Cursor)</li>
+            <li>AI-Assisted Development, Prompt Engineering for Code &amp; Unit Test Generation</li>
+            <li>AI Refactoring &amp; Debugging</li>
+          </ul>
+        </div>
 
-      <h3>DevOps &amp; Tools</h3>
-      <ul>
-        <li>Docker</li>
-        <li>Docker Compose</li>
-        <li>Git</li>
-        <li>GitHub</li>
-        <li>Swagger / OpenAPI</li>
-        <li>Visual Studio</li>
-      </ul>
+        <div class="skill-group">
+          <h3>DevOps &amp; Tools</h3>
+          <ul>
+            <li>Docker</li>
+            <li>Docker Compose</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Swagger / OpenAPI</li>
+            <li>Visual Studio</li>
+          </ul>
+        </div>
 
-      <h3>Other</h3>
-      <ul>
-        <li>Polly</li>
-        <li>Telegram Bot API</li>
-        <li>Fondy Checkout API</li>
-      </ul>
+        <div class="skill-group">
+          <h3>Other</h3>
+          <ul>
+            <li>Polly</li>
+            <li>Telegram Bot API</li>
+            <li>Fondy Checkout API</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
 
-      <article>
-        <h3>Tattoo Salon Web API</h3>
-        <p>
-          <strong>Tech Stack:</strong> ASP.NET Core Web API, Clean Architecture,
-          CQRS, MediatR, PostgreSQL, Entity Framework Core, Redis, Hangfire, JWT
-          Authentication, Docker, xUnit
-        </p>
-        <p>REST API for automating tattoo salon business processes.</p>
-        <h4>Key achievements</h4>
-        <ul>
-          <li>Designed and implemented REST API using Clean Architecture.</li>
-          <li>Applied CQRS pattern with MediatR.</li>
-          <li>Implemented JWT authentication with Refresh Tokens.</li>
-          <li>Added Role-Based Authorization.</li>
-          <li>Integrated Redis distributed caching.</li>
-          <li>Developed Hangfire background jobs.</li>
-          <li>Implemented PDF report generation and email notifications.</li>
-          <li>Added optimistic concurrency control using RowVersion.</li>
-          <li>Implemented FluentValidation and global exception handling.</li>
-          <li>Wrote unit and integration tests.</li>
-          <li>Dockerized the entire application using Docker Compose.</li>
-        </ul>
-        <p>
-          GitHub:
-          <a href="https://github.com/Dimab-b/TattooSalon-API-" target="_blank" rel="noopener noreferrer">TattooSalon-API-</a>
-        </p>
-      </article>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Tattoo Salon Web API</h3>
+          <p>
+            <strong>Tech Stack:</strong> ASP.NET Core Web API, Clean Architecture,
+            CQRS, MediatR, PostgreSQL, Entity Framework Core, Redis, Hangfire, JWT
+            Authentication, Docker, xUnit
+          </p>
+          <p>REST API for automating tattoo salon business processes.</p>
+          <h4>Key achievements</h4>
+          <ul>
+            <li>Designed and implemented REST API using Clean Architecture.</li>
+            <li>Applied CQRS pattern with MediatR.</li>
+            <li>Implemented JWT authentication with Refresh Tokens.</li>
+            <li>Added Role-Based Authorization.</li>
+            <li>Integrated Redis distributed caching.</li>
+            <li>Developed Hangfire background jobs.</li>
+            <li>Implemented PDF report generation and email notifications.</li>
+            <li>Added optimistic concurrency control using RowVersion.</li>
+            <li>Implemented FluentValidation and global exception handling.</li>
+            <li>Wrote unit and integration tests.</li>
+            <li>Dockerized the entire application using Docker Compose.</li>
+          </ul>
+          <p>
+            GitHub:
+            <a href="https://github.com/Dimab-b/TattooSalon-API-" target="_blank" rel="noopener noreferrer">TattooSalon-API-</a>
+          </p>
+        </article>
 
-      <article>
-        <h3>Crypto Monitoring API &amp; Telegram Bot</h3>
-        <p>
-          <strong>Tech Stack:</strong> ASP.NET Core Web API, Onion Architecture,
-          CQRS, MediatR, Redis, Hangfire, Polly, Telegram Bot API, Docker
-        </p>
-        <p>Backend service for automated cryptocurrency monitoring and Telegram notifications.</p>
-        <h4>Key achievements</h4>
-        <ul>
-          <li>Built scalable backend using Onion Architecture.</li>
-          <li>Applied CQRS with MediatR.</li>
-          <li>Integrated Telegram Bot API.</li>
-          <li>Implemented scheduled background jobs with Hangfire.</li>
-          <li>Added Redis distributed cache.</li>
-          <li>Implemented Polly Retry and Circuit Breaker policies.</li>
-          <li>Dockerized the application using Docker Compose.</li>
-          <li>Integrated external cryptocurrency API.</li>
-        </ul>
-        <p>
-          GitHub:
-          <a href="https://github.com/Dimab-b/Crypto-Monitoring-TelegramBot-Api" target="_blank" rel="noopener noreferrer">Crypto-Monitoring-TelegramBot-Api</a>
-        </p>
-      </article>
+        <article class="project-card">
+          <h3>Crypto Monitoring API &amp; Telegram Bot</h3>
+          <p>
+            <strong>Tech Stack:</strong> ASP.NET Core Web API, Onion Architecture,
+            CQRS, MediatR, Redis, Hangfire, Polly, Telegram Bot API, Docker
+          </p>
+          <p>Backend service for automated cryptocurrency monitoring and Telegram notifications.</p>
+          <h4>Key achievements</h4>
+          <ul>
+            <li>Built scalable backend using Onion Architecture.</li>
+            <li>Applied CQRS with MediatR.</li>
+            <li>Integrated Telegram Bot API.</li>
+            <li>Implemented scheduled background jobs with Hangfire.</li>
+            <li>Added Redis distributed cache.</li>
+            <li>Implemented Polly Retry and Circuit Breaker policies.</li>
+            <li>Dockerized the application using Docker Compose.</li>
+            <li>Integrated external cryptocurrency API.</li>
+          </ul>
+          <p>
+            GitHub:
+            <a href="https://github.com/Dimab-b/Crypto-Monitoring-TelegramBot-Api" target="_blank" rel="noopener noreferrer">Crypto-Monitoring-TelegramBot-Api</a>
+          </p>
+        </article>
 
-      <article>
-        <h3>Best Shop — ASP.NET Core MVC</h3>
-        <p>
-          <strong>Tech Stack:</strong> ASP.NET Core MVC, Entity Framework Core,
-          MySQL, ASP.NET Identity, Fondy API, Docker
-        </p>
-        <p>Educational e-commerce application built to learn server-side web development.</p>
-        <h4>Key achievements</h4>
-        <ul>
-          <li>Implemented product catalog and shopping cart.</li>
-          <li>Added ASP.NET Identity authentication.</li>
-          <li>Integrated Fondy payment gateway.</li>
-          <li>Worked with Session State.</li>
-          <li>Used Entity Framework Core with MySQL.</li>
-          <li>Dockerized the application.</li>
-        </ul>
-        <p>
-          GitHub:
-          <a href="https://github.com/Dimab-b/E-Commerce-Shop-ASP.NET-Core-MVC-Docker-Fondy" target="_blank" rel="noopener noreferrer">E-Commerce-Shop-ASP.NET-Core-MVC-Docker-Fondy</a>
-        </p>
-      </article>
+        <article class="project-card">
+          <h3>Best Shop — ASP.NET Core MVC</h3>
+          <p>
+            <strong>Tech Stack:</strong> ASP.NET Core MVC, Entity Framework Core,
+            MySQL, ASP.NET Identity, Fondy API, Docker
+          </p>
+          <p>Educational e-commerce application built to learn server-side web development.</p>
+          <h4>Key achievements</h4>
+          <ul>
+            <li>Implemented product catalog and shopping cart.</li>
+            <li>Added ASP.NET Identity authentication.</li>
+            <li>Integrated Fondy payment gateway.</li>
+            <li>Worked with Session State.</li>
+            <li>Used Entity Framework Core with MySQL.</li>
+            <li>Dockerized the application.</li>
+          </ul>
+          <p>
+            GitHub:
+            <a href="https://github.com/Dimab-b/E-Commerce-Shop-ASP.NET-Core-MVC-Docker-Fondy" target="_blank" rel="noopener noreferrer">E-Commerce-Shop-ASP.NET-Core-MVC-Docker-Fondy</a>
+          </p>
+        </article>
+      </div>
     </section>
 
     <section id="education">
@@ -257,7 +296,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer style="border-top: 3px solid #2563eb;">
     <p>
       <small>
         &copy; 2026 Dmytro Batih.
