@@ -1,18 +1,13 @@
 function Languages({ languages }) {
   return (
-    <section
-      id="languages"
-      className="mt-5 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
-    >
-      <h2 className="mb-5 border-b-2 border-slate-200 pb-3 text-2xl font-semibold tracking-tight text-slate-900">
+    <section id="languages" className="mt-6 border-t border-slate-700 pt-5">
+      <h2 className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-400">
         Languages
       </h2>
-      <ul className="flex flex-wrap gap-2">
+      <ul className="space-y-2 text-sm">
         {languages.map((item) => (
-          <li
-            key={item}
-            className="rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-sm text-blue-700"
-          >
+          <li key={item} className="flex items-center gap-2.5 text-slate-300">
+            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
             {item}
           </li>
         ))}

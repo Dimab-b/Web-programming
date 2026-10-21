@@ -144,17 +144,19 @@ const additionalInfo = [
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-100 px-4 py-8 text-slate-700 sm:px-6 lg:py-12">
-      <div className="mx-auto max-w-5xl">
-        <Header />
-        <main>
-          <Summary paragraphs={summary} />
+    <div className="min-h-screen bg-slate-200/60 text-slate-700">
+      <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:grid lg:grid-cols-[340px_1fr] lg:items-start lg:gap-6 lg:py-10">
+        <aside className="rounded-2xl bg-slate-900 p-6 shadow-xl sm:p-7">
+          <Header />
           <Skills skills={skills} />
+          <Languages languages={languages} />
+        </aside>
+        <main className="mt-4 space-y-4 lg:mt-0">
+          <Summary paragraphs={summary} />
           <Projects projects={projects} />
           <Education education={education} />
-          <Languages languages={languages} />
+          <Footer additionalInfo={additionalInfo} />
         </main>
-        <Footer additionalInfo={additionalInfo} />
       </div>
     </div>
   )

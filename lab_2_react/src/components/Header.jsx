@@ -1,57 +1,61 @@
 function Header() {
   return (
-    <header className="flex flex-col gap-6 rounded-2xl border border-slate-800 bg-slate-900 p-8 text-slate-200 shadow-lg md:flex-row md:items-start md:justify-between">
-      <div>
-        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-          Dmytro Batih
-        </h1>
-        <p className="mt-2 font-medium tracking-wide text-blue-300">
-          Junior / Trainee .NET Developer
-        </p>
-      </div>
-      <address className="not-italic md:min-w-72">
-        <p className="mb-3 text-sm text-slate-300">
+    <header>
+      <h1 className="text-3xl font-bold tracking-tight text-white">Dmytro Batih</h1>
+      <p className="mt-1 text-sm font-medium text-emerald-400">
+        Junior / Trainee .NET Developer
+      </p>
+      <address className="mt-5 not-italic">
+        <p className="text-sm leading-relaxed text-slate-400">
           Lviv Region, Ukraine (open to remote and on-site work in Lviv)
         </p>
-        <ul className="grid gap-1 text-sm">
-          <li>
-            Email:{' '}
+        <ul className="mt-3 space-y-1.5 text-sm">
+          <li className="flex gap-3">
+            <span className="w-16 shrink-0 text-xs uppercase tracking-wide text-slate-500">
+              Email
+            </span>
             <a
               href="mailto:dimoncikbatig8@gmail.com"
-              className="text-blue-200 transition-colors hover:text-white hover:underline"
+              className="break-all text-slate-300 transition-colors hover:text-emerald-400"
             >
               dimoncikbatig8@gmail.com
             </a>
           </li>
-          <li>
-            Phone:{' '}
+          <li className="flex gap-3">
+            <span className="w-16 shrink-0 text-xs uppercase tracking-wide text-slate-500">
+              Phone
+            </span>
             <a
               href="tel:+380937356829"
-              className="text-blue-200 transition-colors hover:text-white hover:underline"
+              className="text-slate-300 transition-colors hover:text-emerald-400"
             >
               +380 93 735 6829
             </a>
           </li>
-          <li>
-            GitHub:{' '}
+          <li className="flex gap-3">
+            <span className="w-16 shrink-0 text-xs uppercase tracking-wide text-slate-500">
+              GitHub
+            </span>
             <a
               href="https://github.com/Dimab-b"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-200 transition-colors hover:text-white hover:underline"
+              className="text-slate-300 transition-colors hover:text-emerald-400"
             >
-              github.com/Dimab-b
+              Dimab-b
             </a>
           </li>
-          <li>
-            LinkedIn:{' '}
+          <li className="flex gap-3">
+            <span className="w-16 shrink-0 text-xs uppercase tracking-wide text-slate-500">
+              LinkedIn
+            </span>
             <a
               href="https://www.linkedin.com/in/dmytro-batih-867963407/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-200 transition-colors hover:text-white hover:underline"
+              className="text-slate-300 transition-colors hover:text-emerald-400"
             >
-              linkedin.com/in/dmytro-batih
+              dmytro-batih
             </a>
           </li>
         </ul>
