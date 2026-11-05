@@ -1,9 +1,12 @@
+import { useEffect, useState } from 'react'
 import Header from './components/Header'
 import Summary from './components/Summary'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
+import Reviews from './components/Reviews'
 import Education from './components/Education'
 import Languages from './components/Languages'
+import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
 
 const summary = [
@@ -142,22 +145,54 @@ const additionalInfo = [
   'Actively improving knowledge of ASP.NET Core ecosystem, Git, SQL and software architecture.',
 ]
 
+function getAutoTheme() {
+  const hour = new Date().getHours()
+  return hour >= 7 && hour < 21 ? 'light' : 'dark'
+}
+
 function App() {
+  const [theme, setTheme] = useState(getAutoTheme)
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', theme === 'dark')
+    return () => document.documentElement.classList.remove('dark')
+  }, [theme])
+
+  const toggleTheme = () => {
+    setTheme((current) => (current === 'dark' ? 'light' : 'dark'))
+  }
+
   return (
-    <div className="min-h-screen bg-slate-200/60 text-slate-700">
-      <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:grid lg:grid-cols-[340px_1fr] lg:items-start lg:gap-6 lg:py-10">
-        <aside className="rounded-2xl bg-slate-900 p-6 shadow-xl sm:p-7">
-          <Header />
-          <Skills skills={skills} />
-          <Languages languages={languages} />
-        </aside>
-        <main className="mt-4 space-y-4 lg:mt-0">
-          <Summary paragraphs={summary} />
-          <Projects projects={projects} />
-          <Education education={education} />
-          <Footer additionalInfo={additionalInfo} />
-        </main>
+    <div className="min-h-screen bg-slate-200/60 text-slate-700 dark:bg-slate-900 dark:text-slate-200">
+      <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:py-10">
+        <div className="mb-4 flex items-center justify-between gap-3">
+          <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
+            {theme === 'dark' ? 'Нічний режим' : 'Денний режим'}
+          </p>
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 transition-colors hover:border-emerald-400 hover:text-emerald-700 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-emerald-500 dark:hover:text-emerald-400"
+          >
+            {theme === 'dark' ? 'Світла тема' : 'Темна тема'}
+          </button>
+        </div>
+        <div className="lg:grid lg:grid-cols-[340px_1fr] lg:items-start lg:gap-6">
+          <aside className="rounded-2xl bg-slate-900 p-6 shadow-xl sm:p-7 dark:bg-slate-950">
+            <Header />
+            <Skills skills={skills} />
+            <Languages languages={languages} />
+          </aside>
+          <main className="mt-4 space-y-4 lg:mt-0">
+            <Summary paragraphs={summary} />
+            <Projects projects={projects} />
+            <Reviews />
+            <Education education={education} />
+            <Footer additionalInfo={additionalInfo} />
+          </main>
+        </div>
       </div>
+      <ContactForm />
     </div>
   )
 }
