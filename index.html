@@ -25,6 +25,9 @@
     <div class="brand">
       <h1>Dmytro Batih</h1>
       <p>Junior / Trainee .NET Developer</p>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">
+        Нічний режим
+      </button>
     </div>
     <address>
       <p>Lviv Region, Ukraine (open to remote and on-site work in Lviv)</p>
@@ -294,9 +297,20 @@
         <li>Actively improving knowledge of ASP.NET Core ecosystem, Git, SQL and software architecture.</li>
       </ul>
     </section>
+
+    <section id="reviews">
+      <h2>Reviews</h2>
+      <div id="reviews-container" class="reviews-grid">
+        <p class="reviews-status">Завантаження відгуків…</p>
+      </div>
+    </section>
   </main>
 
   <footer style="border-top: 3px solid #2563eb;">
+    <section id="system-info">
+      <h2>System Information</h2>
+      <dl id="system-info-list" class="system-info-list"></dl>
+    </section>
     <p>
       <small>
         &copy; 2026 Dmytro Batih.
@@ -305,5 +319,31 @@
       </small>
     </p>
   </footer>
+
+  <div id="contact-modal" class="modal" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+      <button type="button" class="modal__close" id="modal-close" aria-label="Закрити">&times;</button>
+      <h2 id="contact-title">Зворотний зв'язок</h2>
+      <p class="modal__subtitle">Залиште повідомлення — і я зв'яжуся з вами.</p>
+      <form class="contact-form" action="https://formspree.io/f/mbggwzeb" method="POST">
+        <label for="contact-name">Ім'я</label>
+        <input id="contact-name" name="name" type="text" placeholder="Ваше ім'я" required>
+
+        <label for="contact-email">Email</label>
+        <input id="contact-email" name="email" type="email" placeholder="you@example.com" required>
+
+        <label for="contact-phone">Номер телефону</label>
+        <input id="contact-phone" name="phone" type="tel" placeholder="+380 00 000 00 00" required>
+
+        <label for="contact-message">Повідомлення</label>
+        <textarea id="contact-message" name="message" rows="4" placeholder="Ваше повідомлення" required></textarea>
+
+        <button type="submit" class="btn btn--primary">Надіслати</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
